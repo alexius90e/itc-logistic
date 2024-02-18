@@ -72,6 +72,7 @@
 
     &-title {
       width: calc(100% - 1px);
+      margin: 8px 0 0;
       color: $white;
       font-size: 48px;
       font-style: normal;
@@ -82,10 +83,12 @@
       overflow-wrap: break-word;
 
       @include laptop {
+        margin: 6px 0 0;
         font-size: 40px;
       }
 
       @include mobile {
+        margin: 10px 0 0;
         font-size: 15px;
       }
     }
