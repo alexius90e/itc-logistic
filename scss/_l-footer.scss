@@ -1,3 +1,78 @@
 .footer {
+  padding: 95px 0 88px;
 
+  @include laptop {
+    padding: 55px 0 71px;
+  }
+
+  @include mobile {
+    padding: 40px 0 58px;
+  }
+
+  & * {
+    color: $white;
+  }
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 29px;
+    max-width: 1138px;
+
+    @include tablet {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__ank-logo {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    max-width: 364px;
+    color: $white;
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+
+    @include mobile {
+      max-width: 306px;
+      font-size: 10px;
+    }
+
+    & span {
+      display: inline-block;
+      padding-left: 6px;
+      word-break: break-all;
+    }
+
+    & img {
+      display: block;
+      max-height: 100%;
+      width: auto;
+
+      @include mobile {
+        max-height: 53px;
+      }
+    }
+
+    
+  }
+
+  &__copyright {
+    color: $white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+
+    @include mobile {
+      font-size: 8px;
+    }
+  }
 }
