@@ -157,23 +157,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 576px) {
   .footer__ank-logo {
-    max-width: 306px;
+    flex: 0 1 306px;
+    max-width: 100%;
     font-size: 10px;
   }
 }
-.footer__ank-logo span {
+.footer__ank-logo-text {
   display: inline-block;
   padding-left: 6px;
   word-break: break-all;
 }
-.footer__ank-logo img {
+@media (max-width: 576px) {
+  .footer__ank-logo-text {
+    flex: 0 0 138px;
+  }
+}
+.footer__ank-logo-ank, .footer__ank-logo-iso {
   display: block;
   max-height: 100%;
+  max-width: 100%;
   width: auto;
+  height: auto;
 }
 @media (max-width: 576px) {
-  .footer__ank-logo img {
-    max-height: 53px;
+  .footer__ank-logo-ank, .footer__ank-logo-iso {
+    max-height: 52px;
   }
 }
 .footer__copyright {

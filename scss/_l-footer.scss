@@ -40,27 +40,34 @@
     text-transform: capitalize;
 
     @include mobile {
-      max-width: 306px;
+      flex: 0 1 306px;
+      max-width: 100%;
       font-size: 10px;
     }
 
-    & span {
+    &-text {
       display: inline-block;
       padding-left: 6px;
       word-break: break-all;
-    }
-
-    & img {
-      display: block;
-      max-height: 100%;
-      width: auto;
 
       @include mobile {
-        max-height: 53px;
+        flex: 0 0 138px;
       }
     }
 
-    
+    &-ank,
+    &-iso {
+      display: block;
+      max-height: 100%;
+      max-width: 100%;
+      width: auto;
+      height: auto;
+
+      @include mobile {
+        max-height: 52px;
+      }
+    }
+
   }
 
   &__copyright {
