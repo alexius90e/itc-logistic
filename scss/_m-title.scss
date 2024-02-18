@@ -1,5 +1,5 @@
 .title {
-  margin: 0;
+  margin: 0 0 95px;
   color: $white;
   font-size: 67px;
   font-style: normal;
@@ -10,11 +10,17 @@
     font-size: 57px;
   }
 
+  @include laptop {
+    margin: 0 0 65px;
+  }
+
   @include tablet {
     font-size: 32px;
   }
 
   @include mobile {
+    text-align: center;
+    margin: 0 0 30px;
     font-size: 19px;
   }
 }

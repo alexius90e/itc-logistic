@@ -78,7 +78,7 @@ ul {
 }
 
 .title {
-  margin: 0;
+  margin: 0 0 95px;
   color: #ffffff;
   font-size: 67px;
   font-style: normal;
@@ -90,6 +90,11 @@ ul {
     font-size: 57px;
   }
 }
+@media (max-width: 1024px) {
+  .title {
+    margin: 0 0 65px;
+  }
+}
 @media (max-width: 768px) {
   .title {
     font-size: 32px;
@@ -97,6 +102,8 @@ ul {
 }
 @media (max-width: 576px) {
   .title {
+    text-align: center;
+    margin: 0 0 30px;
     font-size: 19px;
   }
 }
@@ -131,6 +138,11 @@ ul {
 @media (max-width: 1200px) {
   .first-screen__title {
     margin: 0 0 16px;
+  }
+}
+@media (max-width: 576px) {
+  .first-screen__title {
+    text-align: left;
   }
 }
 .first-screen__description {
@@ -205,5 +217,102 @@ ul {
   .first-screen__buttons {
     justify-content: center;
     margin: 16px 0 0;
+  }
+}
+
+.services__title {
+  margin: 0 0 95px;
+}
+@media (max-width: 1024px) {
+  .services__title {
+    margin: 0 0 65px;
+  }
+}
+@media (max-width: 576px) {
+  .services__title {
+    margin: 0 0 30px;
+  }
+}
+.services__cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 64px 30px;
+}
+@media (max-width: 1024px) {
+  .services__cards {
+    gap: 42px 20px;
+  }
+}
+@media (max-width: 576px) {
+  .services__cards {
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.services__card {
+  flex: 0 0 calc(33.3333333333% - 20px);
+  max-width: calc(33.3333333333% - 20px);
+}
+@media (max-width: 1024px) {
+  .services__card {
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
+@media (max-width: 576px) {
+  .services__card {
+    flex: 0 1 auto;
+    max-width: 264px;
+    width: 100%;
+  }
+}
+.services__card-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 334px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 40px;
+  background-color: #ffffff;
+}
+@media (max-width: 1024px) {
+  .services__card-figure {
+    height: 280px;
+  }
+}
+@media (max-width: 576px) {
+  .services__card-figure {
+    height: 120px;
+  }
+}
+.services__card-figure-image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+.services__card-title {
+  width: calc(100% - 1px);
+  color: #ffffff;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+@media (max-width: 1024px) {
+  .services__card-title {
+    font-size: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .services__card-title {
+    font-size: 15px;
   }
 }

@@ -26,6 +26,10 @@
     @include desktop {
       margin: 0 0 16px;
     }
+
+    @include mobile {
+      text-align: left;
+    }
   }
 
   &__description {
@@ -97,8 +101,5 @@
       justify-content: center;
       margin: 16px 0 0;
     }
-  }
-
-  &__button {
   }
 }
