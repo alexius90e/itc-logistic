@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+html {
+  color: #0a0a0a;
+  font-size: 1rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: "Rubik", sans-serif;
+}
+
+a {
+  color: #041862;
+  text-decoration: none;
+}
+a:hover {
+  color: #0535DF;
+}
+
+figure {
+  margin: 0;
+}
+
+p {
+  margin: 16px 0;
+}
+
+ul {
+  margin: 16px 0;
+  padding-left: 18px;
+}
+
+.text-16 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+@media (max-width: 768px) {
+  .text-16 {
+    font-size: 14px;
+  }
+}
+
+.h2 {
+  margin: 0 0 32px;
+  color: #041862;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 42px;
+}
+@media (max-width: 768px) {
+  .h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .h2 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+}
+
+.section {
+  padding: 60px 0;
+}
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 0;
+  }
+}
+@media (max-width: 576px) {
+  .section {
+    padding: 32px 0;
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    padding: 0 10px;
+  }
+}
