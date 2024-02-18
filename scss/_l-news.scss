@@ -42,6 +42,7 @@
     background-color: $white;
     transition: max-height ease-in-out 0.2s;
     will-change: max-height;
+    cursor: pointer;
 
     @include laptop {
       padding: 21px;
@@ -114,11 +115,14 @@
     }
 
     &-date {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
-      text-align: right;
       text-transform: uppercase;
 
       @include laptop {
