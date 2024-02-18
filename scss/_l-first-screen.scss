@@ -1,0 +1,104 @@
+.first-screen {
+  margin-top: 157px;
+  padding: 0px 0 176px;
+  overflow: hidden;
+
+  @include laptop {
+    margin-top: 115px;
+    padding: 0px 0 82px;
+  }
+
+  @include tablet {
+    padding: 0px 0 40px;
+  }
+
+  @include mobile {
+    margin-top: 48px;
+  }
+
+  & .container {
+    position: relative;
+  }
+
+  &__title {
+    margin: 0 0 40px;
+
+    @include desktop {
+      margin: 0 0 16px;
+    }
+  }
+
+  &__description {
+    max-width: 804px;
+    width: 54%;
+    margin: 0;
+    color: $white;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%;
+
+    @include laptop {
+      font-size: 20px;
+    }
+
+    @include tablet {
+      width: auto;
+      max-width: none;
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__map {
+    position: absolute;
+    top: 193px;
+    left: 46%;
+    z-index: -1;
+
+    @include desktop {
+      top: 50%;
+      left: auto;
+      right: -76px;
+      width: 594px;
+      max-width: calc(50% + 76px);
+      transform: translateY(-50%);
+    }
+
+    @include tablet {
+      position: static;
+      width: auto;
+      max-width: none;
+      transform: none;
+    }
+
+    &-image {
+      @include laptop {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin: 64px 0 0;
+
+    @include laptop {
+      justify-content: flex-end;
+      margin: 4px 0 0;
+    }
+
+    @include tablet {
+      justify-content: center;
+      margin: 16px 0 0;
+    }
+  }
+
+  &__button {
+  }
+}

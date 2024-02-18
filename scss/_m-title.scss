@@ -1,0 +1,20 @@
+.title {
+  margin: 0;
+  color: $white;
+  font-size: 67px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 164%;
+
+  @include desktop {
+    font-size: 57px;
+  }
+
+  @include tablet {
+    font-size: 32px;
+  }
+
+  @include mobile {
+    font-size: 19px;
+  }
+}

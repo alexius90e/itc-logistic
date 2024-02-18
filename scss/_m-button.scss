@@ -1,0 +1,25 @@
+.button {
+  padding: 13px 49px;
+  color: $blue;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+  border: 2px solid $white;
+  border-radius: 64px;
+  background-color: $white;
+  transition: $baseTransition;
+  cursor: pointer;
+
+  @include mobile {
+    padding: 8px 22px;
+    font-size: 10px;
+    border: 1px solid $white;
+  }
+
+  &:hover {
+    color: $white;
+    background-color: $blue;
+  }
+}
