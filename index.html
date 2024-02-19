@@ -28,7 +28,9 @@
 
           <div class="header__controls">
             <a class="header__controls-phone" href="tel:+7(499)677-67-19">+7(499)677-67-19</a>
-            <button class="header__controls-callback"><span>заказать звонок</span></button>
+            <button class="header__controls-callback button_callback">
+              <span>заказать звонок</span>
+            </button>
             <button class="header__controls-search-button"></button>
           </div>
         </div>
@@ -60,7 +62,7 @@
           </p>
 
           <div class="first-screen__buttons">
-            <button class="first-screen__button button">Заказать звонок</button>
+            <button class="first-screen__button button button_callback">Заказать звонок</button>
           </div>
         </div>
       </section>
@@ -158,7 +160,7 @@
                   </div>
 
                   <div class="services__card-modal-buttons">
-                    <button class="button">Заказать звонок</button>
+                    <button class="button button_callback">Заказать звонок</button>
                   </div>
                 </div>
               </div>
@@ -247,7 +249,7 @@
                   </div>
 
                   <div class="services__card-modal-buttons">
-                    <button class="button">Заказать звонок</button>
+                    <button class="button button_callback">Заказать звонок</button>
                   </div>
                 </div>
               </div>
@@ -372,7 +374,7 @@
                   </div>
 
                   <div class="services__card-modal-buttons">
-                    <button class="button">Заказать звонок</button>
+                    <button class="button button_callback">Заказать звонок</button>
                   </div>
                 </div>
               </div>
@@ -479,7 +481,7 @@
                   </div>
 
                   <div class="services__card-modal-buttons">
-                    <button class="button">Заказать звонок</button>
+                    <button class="button button_callback">Заказать звонок</button>
                   </div>
                 </div>
               </div>
@@ -587,7 +589,7 @@
                   </div>
 
                   <div class="services__card-modal-buttons">
-                    <button class="button">Заказать звонок</button>
+                    <button class="button button_callback">Заказать звонок</button>
                   </div>
                 </div>
               </div>
@@ -662,7 +664,7 @@
                   </div>
 
                   <div class="services__card-modal-buttons">
-                    <button class="button">Заказать звонок</button>
+                    <button class="button button_callback">Заказать звонок</button>
                   </div>
                 </div>
               </div>
@@ -804,7 +806,7 @@
             </div>
 
             <div class="contacts__info-buttons">
-              <button class="button">Заказать звонок</button>
+              <button class="button button_callback">Заказать звонок</button>
             </div>
           </div>
 
@@ -842,8 +844,47 @@
       </div>
     </footer>
 
-    <div class="modal modal-callback active">
+    <div class="modal modal-callback">
       <div class="modal__body">
+        <h4 class="modal-callback__title">
+          Оставьте ваши <br />
+          контактные данные
+        </h4>
+
+        <p class="modal-callback__description">и наш специалист свяжется с вами</p>
+
+        <form class="modal-callback__form">
+          <input
+            class="modal-callback__form-input"
+            type="text"
+            name="name"
+            placeholder="Введите ваше имя"
+            required
+          />
+          <input
+            class="modal-callback__form-input"
+            type="email"
+            name="email"
+            placeholder="Введите ваш e-mail"
+            required
+          />
+          <input
+            class="modal-callback__form-input"
+            type="text"
+            name="contacts"
+            placeholder="Введите ваши контактные данные"
+            required
+          />
+          <textarea
+            class="modal-callback__form-textarea"
+            name="message"
+            placeholder="Введите ваше сообщение"
+          ></textarea>
+
+          <button class="modal-callback__form-button">ОТПРАВИТЬ ДАННЫЕ</button>
+        </form>
+
+        <button class="modal__close"></button>
       </div>
     </div>
   </body>

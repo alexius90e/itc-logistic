@@ -1,0 +1,138 @@
+.modal-callback {
+  & .modal__body {
+    max-width: calc(100% - 100px);
+    width: 1084px;
+    box-sizing: border-box;
+
+    @include desktop {
+      width: 610px;
+    }
+
+    @include tablet {
+      max-width: calc(100% - 50px);
+      width: 310px;
+    }
+  }
+
+  &__title {
+    max-width: 524px;
+    margin: 0;
+    font-family: "Montserrat";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+
+    @include desktop {
+      font-size: 18px;
+    }
+
+    @include tablet {
+      font-size: 10px;
+    }
+  }
+
+  &__description {
+    margin: 0 0 40px;
+    font-family: "Nunito Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%;
+
+    @include desktop {
+      margin: 0 0 25px;
+      font-size: 14px;
+    }
+
+    @include tablet {
+      margin: 0 0 15px;
+      font-size: 7px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    @include desktop {
+      gap: 20px;
+    }
+
+    @include tablet {
+      gap: 10px;
+    }
+
+    &-input,
+    &-textarea,
+    &-button {
+      display: inline-block;
+      padding: 16px 26px;
+      box-sizing: border-box;
+      color: $blue;
+      font-family: "Nunito Sans";
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 180%;
+      border-radius: 20px;
+      border: 3px solid $blue;
+      background-color: $white;
+      outline: none;
+
+      @include desktop {
+        padding: 9px 15px;
+        font-size: 12px;
+        border-radius: 10px;
+        border-width: 2px;
+      }
+
+      @include tablet {
+        padding: 5px 7px;
+        font-size: 6px;
+        border-radius: 5px;
+        border-width: 1px;
+      }
+    }
+
+    &-textarea {
+      height: 215px;
+
+      @include desktop {
+        height: 120px;
+      }
+
+      @include tablet {
+        height: 64px;
+      }
+    }
+
+    &-button {
+      color: $blue;
+      font-family: "Montserrat";
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+      background-color: $white;
+      transition: $baseTransition;
+      cursor: pointer;
+
+      @include desktop {
+        font-size: 18px;
+      }
+
+      @include tablet {
+        font-size: 10px;
+      }
+
+      &:hover {
+        color: $white;
+        background-color: $blue;
+      }
+    }
+  }
+}
