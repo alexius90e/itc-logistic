@@ -1,3 +1,256 @@
 .header {
+  position: sticky;
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: 100;
 
+  @include laptop {
+    top: 25px;
+  }
+
+  @include mobile {
+    top: 10px;
+  }
+
+  & .container {
+    max-width: 1756px;
+
+    @include desktop {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+
+    @include tablet {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 8px 40px;
+    border-radius: 15px;
+    background-color: $white;
+    box-shadow: 0 0 24px rgba($color: $blue, $alpha: 0.25);
+
+    @include desktop {
+      gap: 14px;
+      padding: 12px 18px;
+    }
+
+    @include desktop {
+      gap: 8px;
+    }
+
+    @include tablet {
+      gap: 2px;
+      padding: 6px 8px;
+      border-radius: 5px;
+    }
+  }
+
+  &__logo {
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-image {
+        display: inline-block;
+        max-width: 89px;
+        height: auto;
+
+        @include desktop {
+          max-width: 68px;
+        }
+
+        @include laptop {
+          max-width: 48px;
+        }
+
+        @include tablet {
+          max-width: 25px;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+
+    @include desktop {
+      gap: 5px;
+    }
+
+    @include tablet {
+      gap: 3px;
+    }
+
+    &-link {
+      padding: 0 8px;
+      color: $blue;
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: uppercase;
+
+      @include desktop {
+        padding: 2px 8px;
+        font-size: 15px;
+      }
+
+      @include laptop {
+        padding: 2px 8px;
+        font-size: 11px;
+      }
+
+      @include tablet {
+        padding: 1px 3px;
+        font-size: 7px;
+      }
+
+      &_news {
+        @include mobilesm {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__controls {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+
+    @include desktop {
+      gap: 6px;
+    }
+
+    @include tablet {
+      gap: 3px;
+    }
+
+    &-phone {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: $blue;
+      font-family: "Montserrat";
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+
+      @include desktop {
+        gap: 3px;
+        font-size: 15px;
+      }
+
+      @include tablet {
+        gap: 1px;
+        font-size: 8px;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url(../assets/phone.svg) center no-repeat;
+        background-size: 20px;
+
+        @include desktop {
+          width: 14px;
+          height: 14px;
+          background-size: 14px;
+        }
+
+        @include tablet {
+          width: 6px;
+          height: 6px;
+          background-size: 6px;
+        }
+      }
+    }
+
+    &-callback {
+      padding: 5px 16px;
+      color: $white;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: uppercase;
+      border: 1px solid $blue;
+      border-radius: 24px;
+      background-color: $blue;
+      transition: $baseTransition;
+      cursor: pointer;
+
+      @include desktop {
+        padding: 5px 10px;
+        font-size: 15px;
+      }
+
+      @include tablet {
+        width: 12px;
+        height: 12px;
+        padding: 0;
+        border-radius: 3px;
+        background: url(../assets/phone-wh.svg) center no-repeat;
+        background-color: $blue;
+        background-size: 8px;
+      }
+
+      &:hover {
+        color: $blue;
+        background-color: $white;
+
+        @include tablet {
+          background-color: $blue;
+        }
+      }
+
+      & span {
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+
+    &-search-button {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      margin-left: 20px;
+      border: none;
+      background: url(../assets/search.svg) center no-repeat;
+      background-size: 40px;
+      cursor: pointer;
+
+      @include desktop {
+        width: 28px;
+        height: 28px;
+        margin-left: 10px;
+        background-size: 28px;
+      }
+
+      @include tablet {
+        width: 12px;
+        height: 12px;
+        margin-left: 0;
+        background-size: 12px;
+      }
+    }
+  }
 }
