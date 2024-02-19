@@ -871,6 +871,17 @@ h6 {
     width: 100%;
   }
 }
+.recalls__card.active::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  background-color: rgba(17, 98, 155, 0.7);
+  backdrop-filter: blur(20px);
+}
 .recalls__card-title {
   margin: 0;
   font-size: 38px;
@@ -889,6 +900,84 @@ h6 {
   .recalls__card-title {
     font-size: 11px;
   }
+}
+.recalls__card.active .recalls__card-letter {
+  transform: translateX(-50%) translateY(-50%);
+}
+.recalls__card-letter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 201;
+  max-height: 94vh;
+  max-width: 1640px;
+  width: 94vw;
+  padding: 32px;
+  box-sizing: border-box;
+  overflow: auto;
+  border-radius: 40px;
+  background-color: #ffffff;
+  transform: translateX(-240vw) translateY(-50%);
+}
+@media (max-width: 1024px) {
+  .recalls__card-letter {
+    padding: 30px 18px;
+  }
+}
+@media (max-width: 768px) {
+  .recalls__card-letter {
+    padding: 12px 15px;
+    border-radius: 20px;
+  }
+}
+.recalls__card-letter::-webkit-scrollbar {
+  width: 4px;
+}
+.recalls__card-letter::-webkit-scrollbar-thumb:vertical {
+  border-radius: 16px;
+  background-color: rgba(10, 10, 10, 0.25);
+}
+.recalls__card-letter-image {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.recalls__card-close {
+  content: "";
+  position: absolute;
+  top: 80px;
+  right: 60px;
+  display: block;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: url(../assets/close.svg) center no-repeat;
+  background-size: 100%;
+  transition: all ease-in-out 0.15s;
+  cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .recalls__card-close {
+    top: 50px;
+    right: 45px;
+    width: 29px;
+    height: 29px;
+  }
+}
+@media (max-width: 768px) {
+  .recalls__card-close {
+    top: 20px;
+    right: 15px;
+    width: 11px;
+    height: 11px;
+  }
+}
+.recalls__card-close:hover {
+  transform: scale(1.08);
+}
+.recalls__card-close:active {
+  transform: scale(1);
 }
 
 .contacts {

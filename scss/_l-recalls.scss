@@ -42,6 +42,18 @@
       width: 100%;
     }
 
+    &.active::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 200;
+      background-color: rgba($color: $blue, $alpha: 0.7);
+      backdrop-filter: blur(20px);
+    }
+
     &-title {
       margin: 0;
       font-size: 38px;
@@ -57,6 +69,88 @@
 
       @include mobile {
         font-size: 11px;
+      }
+    }
+
+    &.active &-letter {
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    &-letter {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: 201;
+      max-height: 94vh;
+      max-width: 1640px;
+      width: 94vw;
+      padding: 32px;
+      box-sizing: border-box;
+      overflow: auto;
+      border-radius: 40px;
+      background-color: $white;
+      transform: translateX(-240vw) translateY(-50%);
+
+      @include laptop {
+        padding: 30px 18px;
+      }
+
+      @include tablet {
+        padding: 12px 15px;
+        border-radius: 20px;
+      }
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-thumb:vertical {
+        border-radius: 16px;
+        background-color: rgba($color: $black, $alpha: 0.25);
+      }
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-close {
+      content: "";
+      position: absolute;
+      top: 80px;
+      right: 60px;
+      display: block;
+      width: 44px;
+      height: 44px;
+      border: none;
+      background: url(../assets/close.svg) center no-repeat;
+      background-size: 100%;
+      transition: $baseTransition;
+      cursor: pointer;
+
+      @include desktop {
+        top: 50px;
+        right: 45px;
+        width: 29px;
+        height: 29px;
+      }
+
+      @include tablet {
+        top: 20px;
+        right: 15px;
+        width: 11px;
+        height: 11px;
+      }
+
+      &:hover {
+        transform: scale(1.08);
+      }
+
+      &:active {
+        transform: scale(1);
       }
     }
   }
