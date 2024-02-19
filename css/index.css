@@ -86,6 +86,38 @@ h6 {
   color: #ffffff;
   background-color: #11629b;
 }
+.button_fixed {
+  position: fixed;
+  right: 20px;
+  bottom: 64px;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #11629b;
+  border-radius: 20px;
+  background: url(../assets/phone.svg) center no-repeat;
+  background-size: 64px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .button_fixed {
+    right: 5px;
+    bottom: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .button_fixed {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-size: 12px;
+  }
+}
 
 .title {
   margin: 0 0 95px;
@@ -1674,6 +1706,7 @@ h6 {
 .modal-about__buttons .button {
   color: #ffffff;
   background-color: #11629b;
+  border-color: #11629b;
 }
 .modal-about__buttons .button:hover {
   color: #11629b;
@@ -1720,6 +1753,9 @@ h6 {
   }
 }
 
+.modal-callback {
+  z-index: 600;
+}
 .modal-callback .modal__body {
   max-width: calc(100% - 100px);
   width: 1084px;

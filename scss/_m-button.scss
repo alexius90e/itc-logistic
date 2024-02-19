@@ -22,4 +22,35 @@
     color: $white;
     background-color: $blue;
   }
+
+  &_fixed {
+    position: fixed;
+    right: 20px;
+    bottom: 64px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid $blue;
+    border-radius: 20px;
+    background: url(../assets/phone.svg) center no-repeat;
+    background-size: 64px;
+    background-color: $white;
+    cursor: pointer;
+
+    @include desktop {
+      right: 5px;
+      bottom: 40px;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border-width: 1px;
+      background-size: 24px;
+    }
+
+    @include tablet {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      background-size: 12px;
+    }
+  }
 }

@@ -1,4 +1,6 @@
 .modal-callback {
+  z-index: 600;
+
   & .modal__body {
     max-width: calc(100% - 100px);
     width: 1084px;
