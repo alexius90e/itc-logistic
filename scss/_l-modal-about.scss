@@ -1,3 +1,238 @@
 .modal-about {
-  
+  color: $blue;
+
+  & .modal__body {
+    max-width: calc(100% - 100px);
+    width: 1640px;
+    box-sizing: border-box;
+
+    @include desktop {
+      width: 924px;
+    }
+
+    @include tablet {
+      max-width: calc(100% - 50px);
+      width: 310px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 40px;
+    font-family: "Montserrat";
+    font-size: 67px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 180%;
+    text-transform: capitalize;
+    text-align: center;
+
+    @include desktop {
+      margin: 0 0 35px;
+      font-size: 45px;
+    }
+
+    @include tablet {
+      margin: 0 0 15px;
+      font-size: 15px;
+    }
+
+    &_events {
+      margin: 40px 0;
+      text-align: left;
+
+      @include desktop {
+        margin: 35px 0;
+      }
+
+      @include tablet {
+        margin: 15px 0;
+        text-align: center;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    padding-left: 400px;
+    flex-direction: column;
+    font-family: "Nunito Sans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%;
+    background: url(../assets/logo.svg) left top no-repeat;
+    background-size: 339px;
+
+    @include desktop {
+      padding-left: 240px;
+      margin: 0 0 35px;
+      font-size: 20px;
+      background-size: 212px;
+    }
+
+    @include tablet {
+      padding-left: 0;
+      padding-top: 100px;
+      margin: 0 0 15px;
+      font-size: 10px;
+      background-position: center top;
+      background-size: 114px;
+    }
+
+    & p {
+      margin: 0;
+    }
+  }
+
+  &__events {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 21px;
+
+    &-item {
+      flex: 0 0 calc(50% - 21px / 2);
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 30px 21px;
+      box-sizing: border-box;
+      color: $white;
+      border-radius: 40px;
+      background-color: $blue;
+
+      @include desktop {
+        gap: 20px;
+      }
+
+      @include tablet {
+        flex: 1 1 100%;
+        padding: 20px 16px;
+      }
+
+      &-title {
+        font-family: "Montserrat";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include desktop {
+          font-size: 21px;
+        }
+
+        @include tablet {
+          font-size: 11px;
+        }
+      }
+
+      &-text {
+        max-width: 448px;
+        margin: 0 auto;
+        color: #fff;
+        font-family: "Nunito Sans";
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+
+        @include desktop {
+          max-width: 260px;
+          font-size: 16px;
+        }
+
+        @include tablet {
+          font-size: 10px;
+        }
+      }
+
+      &-date {
+        color: #fff;
+        font-family: "Nunito Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        text-align: right;
+
+        @include desktop {
+          font-size: 11px;
+          text-align: center;
+        }
+
+        @include tablet {
+          font-size: 8px;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+
+    @include desktop {
+      margin: 35px 0;
+    }
+
+    @include tablet {
+      margin: 15px 0;
+    }
+
+    & .button {
+      color: $white;
+      background-color: $blue;
+
+      &:hover {
+        color: $blue;
+        background-color: $white;
+      }
+    }
+  }
+
+  &__ank {
+    &-logo {
+      display: flex;
+      align-items: center;
+      max-width: 364px;
+      color: $blue;
+      font-family: "Montserrat";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: capitalize;
+
+      @include desktop {
+        margin: 35px 0;
+      }
+
+      @include tablet {
+        max-width: 262px;
+        font-size: 7px;
+      }
+
+      &-text {
+        display: inline-block;
+        padding-left: 6px;
+        word-break: break-all;
+      }
+
+      &-ank,
+      &-iso {
+        display: block;
+        max-height: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+
+        @include tablet {
+          max-height: 36px;
+        }
+      }
+    }
+  }
 }
