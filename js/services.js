@@ -1,19 +1,25 @@
-const serviceCards = document.querySelectorAll(".services__card");
+const serviceCards = document.querySelectorAll('.services__card');
 
 serviceCards.forEach((card) => {
-  card.addEventListener("click", (event) => {
+  card.addEventListener('click', (event) => {
     const isCard = event.target === event.currentTarget;
-    const isCardTitle = event.target.classList.contains("services__card-title");
-    const isCardFigure = event.target.classList.contains("services__card-figure");
-    const isCardFigureImage = event.target.classList.contains("services__card-figure-image");
-    const isCloseBtn = event.target.classList.contains("services__card-modal-close");
+    const isCardTitle = event.target.classList.contains('services__card-title');
+    const isCardFigure = event.target.classList.contains('services__card-figure');
+    const isCardFigureImage = event.target.classList.contains('services__card-figure-image');
+    const isCloseBtn = event.target.classList.contains('services__card-modal-close');
 
     if (isCard || isCardTitle || isCardFigure || isCardFigureImage) {
-      event.currentTarget.classList.toggle("active");
+      event.currentTarget.classList.toggle('active');
+      if (document.body.style.overflow) {
+        document.body.style.overflow = null;
+      } else {
+        document.body.style.overflow = 'hidden';
+      }
     }
 
     if (isCloseBtn) {
-      event.currentTarget.classList.remove("active");
+      event.currentTarget.classList.remove('active');
+      document.body.style.overflow = null;
     }
   });
 });

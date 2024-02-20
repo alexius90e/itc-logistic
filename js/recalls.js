@@ -8,10 +8,16 @@ recallsCards.forEach((card) => {
 
     if (isCard || isCardTitle) {
       event.currentTarget.classList.toggle("active");
+      if (document.body.style.overflow) {
+        document.body.style.overflow = null;
+      } else {
+        document.body.style.overflow = 'hidden';
+      }
     }
 
     if (isCloseBtn) {
       event.currentTarget.classList.remove("active");
+      document.body.style.overflow = null;
     }
   });
 });

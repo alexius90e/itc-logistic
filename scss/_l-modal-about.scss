@@ -18,7 +18,7 @@
 
   &__title {
     margin: 0 0 40px;
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-size: 67px;
     font-style: normal;
     font-weight: 800;
@@ -55,7 +55,7 @@
     display: flex;
     padding-left: 400px;
     flex-direction: column;
-    font-family: "Nunito Sans";
+    font-family: 'Nunito Sans';
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -110,7 +110,7 @@
       }
 
       &-title {
-        font-family: "Montserrat";
+        font-family: 'Montserrat';
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
@@ -128,10 +128,11 @@
       }
 
       &-text {
+        flex: 1 1 auto;
         max-width: 448px;
         margin: 0 auto;
         color: #fff;
-        font-family: "Nunito Sans";
+        font-family: 'Nunito Sans';
         font-size: 23px;
         font-style: normal;
         font-weight: 600;
@@ -149,7 +150,7 @@
 
       &-date {
         color: #fff;
-        font-family: "Nunito Sans";
+        font-family: 'Nunito Sans';
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -200,7 +201,7 @@
       align-items: center;
       max-width: 364px;
       color: $blue;
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
@@ -208,7 +209,7 @@
       text-transform: capitalize;
 
       @include desktop {
-        margin: 35px 0;
+        margin: 35px 0 0;
       }
 
       @include tablet {
@@ -216,23 +217,9 @@
         font-size: 7px;
       }
 
-      &-text {
-        display: inline-block;
-        padding-left: 6px;
-        word-break: break-all;
-      }
-
-      &-ank,
-      &-iso {
+      & img {
         display: block;
-        max-height: 100%;
         max-width: 100%;
-        width: auto;
-        height: auto;
-
-        @include tablet {
-          max-height: 36px;
-        }
       }
     }
   }

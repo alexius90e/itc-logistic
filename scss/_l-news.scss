@@ -42,24 +42,16 @@
     background-color: $white;
     transition: max-height ease-in-out 0.2s;
     will-change: max-height;
-    cursor: pointer;
 
     @include laptop {
       padding: 21px;
     }
 
     @include mobile {
-      max-height: 46px;
       max-width: 264px;
       width: 100%;
       padding: 11px 11px 16px;
       border-radius: 24px;
-    }
-
-    &:hover {
-      @include mobile {
-        max-height: 1000px;
-      }
     }
 
     &_small {
@@ -92,6 +84,15 @@
       @include mobile {
         font-size: 11px;
         line-height: 24px;
+      }
+    }
+
+    &-panel {
+      transition: max-height ease-in-out 0.1s;
+
+      @include mobile {
+        max-height: 0;
+        overflow: hidden;
       }
     }
 

@@ -1,0 +1,28 @@
+.modal-success {
+  & .modal__body {
+    @include tablet {
+      max-width: calc(100% - 40px);
+      width: 480px;
+      box-sizing: border-box;
+    }
+  }
+
+  &__title {
+    margin: 80px 0;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+
+    @include desktop {
+      margin: 70px 0;
+      font-size: 24px;
+    }
+
+    @include tablet {
+      margin: 40px 0;
+      font-size: 16px;
+    }
+  }
+}
