@@ -52,7 +52,19 @@ callbackModalButtons.forEach((button) => {
 if (callbackModalForm && callbackModal) {
   callbackModalForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    callbackModal.classList.remove('active');
-    successModal.classList.add('active');
+    const formData = new FormData(callbackModalForm);
+    const email = formData.has('email') ? formData.get('email') : 'unknown';
+    const name = formData.has('name') ? formData.get('name') : 'unknown';
+    const contacts = formData.has('contacts') ? formData.get('contacts') : 'unknown';
+    const message = formData.has('message') ? formData.get('message') : 'no message';
+
+    fetch('../contact-form-handler.php', {
+      method: 'POST',
+      data: { name, email, contacts, message },
+    }).then(() => {
+      callbackModalForm.reset();
+      callbackModal.classList.remove('active');
+      successModal.classList.add('active');
+    });
   });
 }

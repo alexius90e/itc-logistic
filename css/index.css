@@ -1988,12 +1988,20 @@ h6 {
   font-weight: 500;
 }
 
+.modal-success .modal__body {
+  height: 320px;
+}
 @media (max-width: 768px) {
   .modal-success .modal__body {
     max-width: calc(100% - 40px);
     width: 480px;
     box-sizing: border-box;
   }
+}
+.modal-success .modal__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .modal-success__title {
   margin: 80px 0;
