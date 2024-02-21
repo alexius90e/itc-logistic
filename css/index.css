@@ -734,7 +734,7 @@ h6 {
   width: 94vw;
   padding: 32px;
   box-sizing: border-box;
-  overflow: auto;
+  overflow: hidden;
   border-radius: 40px;
   background-color: #ffffff;
   transform: translateX(-240vw) translateY(-50%);
@@ -751,13 +751,6 @@ h6 {
     padding: 12px 15px;
     border-radius: 20px;
   }
-}
-.services__card-modal::-webkit-scrollbar {
-  width: 4px;
-}
-.services__card-modal::-webkit-scrollbar-thumb:vertical {
-  border-radius: 16px;
-  background-color: rgba(10, 10, 10, 0.25);
 }
 .services__card-modal-heading {
   margin: 0 0 55px;
@@ -822,6 +815,10 @@ h6 {
 .services__card-modal-body {
   display: flex;
   flex-wrap: wrap;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  height: 60vh;
+  overflow: auto;
   gap: 55px 34px;
   max-width: 1362px;
   margin: 0 auto;
@@ -837,6 +834,13 @@ h6 {
   .services__card-modal-body {
     max-width: calc(100% - 32px);
   }
+}
+.services__card-modal-body::-webkit-scrollbar {
+  width: 4px;
+}
+.services__card-modal-body::-webkit-scrollbar-thumb:vertical {
+  border-radius: 16px;
+  background-color: rgba(10, 10, 10, 0.25);
 }
 .services__card-modal-figure {
   flex: 1 1 58%;

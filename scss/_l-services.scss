@@ -127,7 +127,7 @@
       width: 94vw;
       padding: 32px;
       box-sizing: border-box;
-      overflow: auto;
+      overflow: hidden;
       border-radius: 40px;
       background-color: $white;
       transform: translateX(-240vw) translateY(-50%);
@@ -143,14 +143,7 @@
         border-radius: 20px;
       }
 
-      &::-webkit-scrollbar {
-        width: 4px;
-      }
-
-      &::-webkit-scrollbar-thumb:vertical {
-        border-radius: 16px;
-        background-color: rgba($color: $black, $alpha: 0.25);
-      }
+      
 
       &-heading {
         margin: 0 0 55px;
@@ -215,6 +208,9 @@
       &-body {
         display: flex;
         flex-wrap: wrap;
+        min-height: max-content;
+        height: 60vh;
+        overflow: auto;
         gap: 55px 34px;
         max-width: 1362px;
         margin: 0 auto;
@@ -227,6 +223,15 @@
 
         @include mobile {
           max-width: calc(100% - 32px);
+        }
+
+        &::-webkit-scrollbar {
+          width: 4px;
+        }
+  
+        &::-webkit-scrollbar-thumb:vertical {
+          border-radius: 16px;
+          background-color: rgba($color: $black, $alpha: 0.25);
         }
       }
 
