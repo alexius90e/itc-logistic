@@ -742,11 +742,14 @@
               <h3 class="recalls__card-title">агромаш холдинг</h3>
 
               <div class="recalls__card-letter">
-                <img
-                  class="recalls__card-letter-image"
-                  src="./assets/letters/agromash.jpg"
-                  alt="agromash"
-                />
+                <figure class="recalls__card-letter-figure">
+                  <img
+                    class="recalls__card-letter-image"
+                    src="./assets/letters/agromash.jpg"
+                    alt="agromash"
+                  />
+                </figure>
+
                 <button class="recalls__card-close"></button>
               </div>
             </div>
@@ -755,11 +758,14 @@
               <h3 class="recalls__card-title">TCA logistics</h3>
 
               <div class="recalls__card-letter">
-                <img
-                  class="recalls__card-letter-image"
-                  src="./assets/letters/tcl.jpg"
-                  alt="agromash"
-                />
+                <figure class="recalls__card-letter-figure">
+                  <img
+                    class="recalls__card-letter-image"
+                    src="./assets/letters/tcl.jpg"
+                    alt="agromash"
+                  />
+                </figure>
+
                 <button class="recalls__card-close"></button>
               </div>
             </div>
@@ -768,11 +774,14 @@
               <h3 class="recalls__card-title">maquet getinge group</h3>
 
               <div class="recalls__card-letter">
-                <img
-                  class="recalls__card-letter-image"
-                  src="./assets/letters/maquet.jpg"
-                  alt="agromash"
-                />
+                <figure class="recalls__card-letter-figure">
+                  <img
+                    class="recalls__card-letter-image"
+                    src="./assets/letters/maquet.jpg"
+                    alt="agromash"
+                  />
+                </figure>
+
                 <button class="recalls__card-close"></button>
               </div>
             </div>
@@ -781,11 +790,14 @@
               <h3 class="recalls__card-title">promtechavia</h3>
 
               <div class="recalls__card-letter">
-                <img
-                  class="recalls__card-letter-image"
-                  src="./assets/letters/promtechavia.jpg"
-                  alt="agromash"
-                />
+                <figure class="recalls__card-letter-figure">
+                  <img
+                    class="recalls__card-letter-image"
+                    src="./assets/letters/promtechavia.jpg"
+                    alt="agromash"
+                  />
+                </figure>
+
                 <button class="recalls__card-close"></button>
               </div>
             </div>
@@ -855,43 +867,45 @@
 
     <div class="modal modal-callback">
       <div class="modal__body">
-        <h4 class="modal-callback__title">
-          Оставьте ваши <br />
-          контактные данные
-        </h4>
+        <div class="modal__content">
+          <h4 class="modal-callback__title">
+            Оставьте ваши <br />
+            контактные данные
+          </h4>
 
-        <p class="modal-callback__description">и наш специалист свяжется с вами</p>
+          <p class="modal-callback__description">и наш специалист свяжется с вами</p>
 
-        <form class="modal-callback__form">
-          <input
-            class="modal-callback__form-input"
-            type="text"
-            name="name"
-            placeholder="Введите ваше имя"
-            required
-          />
-          <input
-            class="modal-callback__form-input"
-            type="email"
-            name="email"
-            placeholder="Введите ваш e-mail"
-            required
-          />
-          <input
-            class="modal-callback__form-input"
-            type="text"
-            name="contacts"
-            placeholder="Введите ваши контактные данные"
-            required
-          />
-          <textarea
-            class="modal-callback__form-textarea"
-            name="message"
-            placeholder="Введите ваше сообщение"
-          ></textarea>
+          <form class="modal-callback__form">
+            <input
+              class="modal-callback__form-input"
+              type="text"
+              name="name"
+              placeholder="Введите ваше имя"
+              required
+            />
+            <input
+              class="modal-callback__form-input"
+              type="email"
+              name="email"
+              placeholder="Введите ваш e-mail"
+              required
+            />
+            <input
+              class="modal-callback__form-input"
+              type="text"
+              name="contacts"
+              placeholder="Введите ваши контактные данные"
+              required
+            />
+            <textarea
+              class="modal-callback__form-textarea"
+              name="message"
+              placeholder="Введите ваше сообщение"
+            ></textarea>
 
-          <button class="modal-callback__form-button">ОТПРАВИТЬ ДАННЫЕ</button>
-        </form>
+            <button class="modal-callback__form-button">ОТПРАВИТЬ ДАННЫЕ</button>
+          </form>
+        </div>
 
         <button class="modal__close"></button>
       </div>
@@ -899,49 +913,51 @@
 
     <div class="modal modal-contacts">
       <div class="modal__body">
-        <h4 class="modal-contacts__title">наша команда</h4>
+        <div class="modal__content">
+          <h4 class="modal-contacts__title">наша команда</h4>
 
-        <ul class="modal-contacts__list">
-          <li class="modal-contacts__list-item">
-            <div class="modal-contacts__list-item-name">Отдел перевозок по РФ</div>
-            <div class="modal-contacts__list-item-manager">
-              Менеджер Светлана Гуськова -
-              <a href="mailto:sg@itc-logistic.ru">sg@itc-logistic.ru</a>
-            </div>
-          </li>
+          <ul class="modal-contacts__list">
+            <li class="modal-contacts__list-item">
+              <div class="modal-contacts__list-item-name">Отдел перевозок по РФ</div>
+              <div class="modal-contacts__list-item-manager">
+                Менеджер Светлана Гуськова -
+                <a href="mailto:sg@itc-logistic.ru">sg@itc-logistic.ru</a>
+              </div>
+            </li>
 
-          <li class="modal-contacts__list-item">
-            <div class="modal-contacts__list-item-name">Отдел перевозок по СНГ</div>
-            <div class="modal-contacts__list-item-manager">
-              Ген. директор Артём Синеокий -
-              <a href="mailto:as@itc-logistic.ru">as@itc-logistic.ru</a>
-            </div>
-            <div class="modal-contacts__list-item-manager">
-              Менеджер Виктор Кулагин -
-              <a href="mailto:vk@itc-logistic.ru">vk@itc-logistic.ru</a>
-            </div>
-          </li>
+            <li class="modal-contacts__list-item">
+              <div class="modal-contacts__list-item-name">Отдел перевозок по СНГ</div>
+              <div class="modal-contacts__list-item-manager">
+                Ген. директор Артём Синеокий -
+                <a href="mailto:as@itc-logistic.ru">as@itc-logistic.ru</a>
+              </div>
+              <div class="modal-contacts__list-item-manager">
+                Менеджер Виктор Кулагин -
+                <a href="mailto:vk@itc-logistic.ru">vk@itc-logistic.ru</a>
+              </div>
+            </li>
 
-          <li class="modal-contacts__list-item">
-            <div class="modal-contacts__list-item-name">Отдел ВЭД и международных перевозок</div>
-            <div class="modal-contacts__list-item-manager">
-              Руководитель отдела Надежда Парфёнова -
-              <a href="mailto:np@itc-logistic.ru">np@itc-logistic.ru</a>
-            </div>
-            <div class="modal-contacts__list-item-manager">
-              Менеджер Андрей Славущев -
-              <a href="mailto:asv@itc-logistic.ru">asv@itc-logistic.ru</a>
-            </div>
-          </li>
+            <li class="modal-contacts__list-item">
+              <div class="modal-contacts__list-item-name">Отдел ВЭД и международных перевозок</div>
+              <div class="modal-contacts__list-item-manager">
+                Руководитель отдела Надежда Парфёнова -
+                <a href="mailto:np@itc-logistic.ru">np@itc-logistic.ru</a>
+              </div>
+              <div class="modal-contacts__list-item-manager">
+                Менеджер Андрей Славущев -
+                <a href="mailto:asv@itc-logistic.ru">asv@itc-logistic.ru</a>
+              </div>
+            </li>
 
-          <li class="modal-contacts__list-item">
-            <div class="modal-contacts__list-item-name">Отдел Маркетинга</div>
-            <div class="modal-contacts__list-item-manager">
-              Маркетолог Агата Синеокая -
-              <a href="mailto:is@itc-logistic.ru">is@itc-logistic.ru</a>
-            </div>
-          </li>
-        </ul>
+            <li class="modal-contacts__list-item">
+              <div class="modal-contacts__list-item-name">Отдел Маркетинга</div>
+              <div class="modal-contacts__list-item-manager">
+                Маркетолог Агата Синеокая -
+                <a href="mailto:is@itc-logistic.ru">is@itc-logistic.ru</a>
+              </div>
+            </li>
+          </ul>
+        </div>
 
         <button class="modal__close"></button>
       </div>
@@ -949,75 +965,77 @@
 
     <div class="modal modal-about">
       <div class="modal__body">
-        <h4 class="modal-about__title">о нас</h4>
+        <div class="modal__content">
+          <h4 class="modal-about__title">о нас</h4>
 
-        <div class="modal-about__info">
-          <p>Группа компаний ИТЦ ЛОГИСТИК состоит из транспортно-экспедиционных фирм :</p>
-          <p>
-            ООО «ИТЦ Логистик Ист» (год основания 1999) и ООО «ИТЦ Логистика и Экспедирование Ист»
-            (год основания 2015)
-          </p>
-          <p>
-            Это команда высококвалифицированных логистов. Опыт работы каждого сотрудника составляет
-            в среднем от 15-18 лет.
-          </p>
-          <p>
-            Система работы построена на базе высоких немецких стандартов. Группа компаний регулярно
-            подтверждает качество работы сертификатами ISO.
-          </p>
-        </div>
-
-        <h4 class="modal-about__title modal-about__title_events">СОБЫТИЯ</h4>
-
-        <div class="modal-about__events">
-          <div class="modal-about__events-item">
-            <div class="modal-about__events-item-title">
-              Команда «ITC Logistic East» на выставке
-            </div>
-            <div class="modal-about__events-item-text">
-              23.10.2019 команда «ITC Logistic East» посетила международную агро-выставку
-              KazAgro&KazFarm, которая проходила в городе Нур-Султан с 23-25.10.2019 г.
-            </div>
-            <div class="modal-about__events-item-date">23.10.2019</div>
+          <div class="modal-about__info">
+            <p>Группа компаний ИТЦ ЛОГИСТИК состоит из транспортно-экспедиционных фирм :</p>
+            <p>
+              ООО «ИТЦ Логистик Ист» (год основания 1999) и ООО «ИТЦ Логистика и Экспедирование Ист»
+              (год основания 2015)
+            </p>
+            <p>
+              Это команда высококвалифицированных логистов. Опыт работы каждого сотрудника
+              составляет в среднем от 15-18 лет.
+            </p>
+            <p>
+              Система работы построена на базе высоких немецких стандартов. Группа компаний
+              регулярно подтверждает качество работы сертификатами ISO.
+            </p>
           </div>
 
-          <div class="modal-about__events-item">
-            <div class="modal-about__events-item-title">
-              Новая линия сборных грузов. Белоруссия - Казахстан
+          <h4 class="modal-about__title modal-about__title_events">СОБЫТИЯ</h4>
+
+          <div class="modal-about__events">
+            <div class="modal-about__events-item">
+              <div class="modal-about__events-item-title">
+                Команда «ITC Logistic East» на выставке
+              </div>
+              <div class="modal-about__events-item-text">
+                23.10.2019 команда «ITC Logistic East» посетила международную агро-выставку
+                KazAgro&KazFarm, которая проходила в городе Нур-Султан с 23-25.10.2019 г.
+              </div>
+              <div class="modal-about__events-item-date">23.10.2019</div>
             </div>
-            <div class="modal-about__events-item-text">
-              В октябре 2019г. открывается новая линия сборных грузов из Белоруссии в Казахстан.
+
+            <div class="modal-about__events-item">
+              <div class="modal-about__events-item-title">
+                Новая линия сборных грузов. Белоруссия - Казахстан
+              </div>
+              <div class="modal-about__events-item-text">
+                В октябре 2019г. открывается новая линия сборных грузов из Белоруссии в Казахстан.
+              </div>
+              <div class="modal-about__events-item-date">1.9.2019</div>
             </div>
-            <div class="modal-about__events-item-date">1.9.2019</div>
+
+            <div class="modal-about__events-item">
+              <div class="modal-about__events-item-title">Негабаритный груз из Грузии в Россию</div>
+              <div class="modal-about__events-item-text">
+                ООО «ИТЦ Логистика и Экспедирование Ист» успешно организовала доставку негабаритного
+                оборудования для производства напитков из Грузии в Россию (Нальчик).
+              </div>
+              <div class="modal-about__events-item-date">6.7.2019</div>
+            </div>
+
+            <div class="modal-about__events-item">
+              <div class="modal-about__events-item-title">Уникальный проект по доставке</div>
+              <div class="modal-about__events-item-text">
+                ITC Logistic Group реализовала в ноябре-декабре 2021года уникальный проект по
+                доставке медицинского оборудования из Германии в Россию.
+              </div>
+              <div class="modal-about__events-item-date">1.11.2021</div>
+            </div>
           </div>
 
-          <div class="modal-about__events-item">
-            <div class="modal-about__events-item-title">Негабаритный груз из Грузии в Россию</div>
-            <div class="modal-about__events-item-text">
-              ООО «ИТЦ Логистика и Экспедирование Ист» успешно организовала доставку негабаритного
-              оборудования для производства напитков из Грузии в Россию (Нальчик).
-            </div>
-            <div class="modal-about__events-item-date">6.7.2019</div>
+          <div class="modal-about__buttons">
+            <button class="button button_callback">Заказать звонок</button>
           </div>
 
-          <div class="modal-about__events-item">
-            <div class="modal-about__events-item-title">Уникальный проект по доставке</div>
-            <div class="modal-about__events-item-text">
-              ITC Logistic Group реализовала в ноябре-декабре 2021года уникальный проект по доставке
-              медицинского оборудования из Германии в Россию.
-            </div>
-            <div class="modal-about__events-item-date">1.11.2021</div>
+          <div class="modal-about__ank">
+            <a class="modal-about__ank-logo" href="#">
+              <img src="./assets/logo-kammer-russland.svg" alt="kammer" />
+            </a>
           </div>
-        </div>
-
-        <div class="modal-about__buttons">
-          <button class="button button_callback">Заказать звонок</button>
-        </div>
-
-        <div class="modal-about__ank">
-          <a class="modal-about__ank-logo" href="#">
-            <img src="./assets/logo-kammer-russland.svg" alt="kammer" />
-          </a>
         </div>
 
         <button class="modal__close"></button>

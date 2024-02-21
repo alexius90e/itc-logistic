@@ -17,10 +17,14 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    max-height: 94vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 90vh;
+    height: 800px;
     padding: 40px 76px;
     box-sizing: border-box;
-    overflow: auto;
+    overflow: hidden;
     color: $blue;
     border-radius: 40px;
     background-color: $white;
@@ -33,8 +37,16 @@
 
     @include tablet {
       padding: 27px;
+      height: 540px;
       border-radius: 20px;
     }
+  }
+
+  &__content {
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
 
     &::-webkit-scrollbar {
       width: 4px;
@@ -47,16 +59,19 @@
   }
 
   &__close {
-    content: "";
+    content: '';
     position: absolute;
     top: 48px;
     right: 48px;
     display: block;
     width: 44px;
     height: 44px;
+    padding: 6px;
     border: none;
+    border-radius: 4px;
     background: url(../assets/close.svg) center no-repeat;
     background-size: 100%;
+    background-color: rgba($color: $white, $alpha: 1);
     transition: $baseTransition;
     cursor: pointer;
 

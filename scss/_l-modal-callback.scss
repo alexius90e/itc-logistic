@@ -8,6 +8,7 @@
 
     @include desktop {
       width: 610px;
+      height: auto;
     }
 
     @include tablet {
@@ -19,7 +20,7 @@
   &__title {
     max-width: 524px;
     margin: 0;
-    font-family: "Montserrat";
+    font-family: 'Montserrat';
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
@@ -37,7 +38,7 @@
 
   &__description {
     margin: 0 0 40px;
-    font-family: "Nunito Sans";
+    font-family: 'Nunito Sans';
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -74,7 +75,7 @@
       padding: 16px 26px;
       box-sizing: border-box;
       color: $blue;
-      font-family: "Nunito Sans";
+      font-family: 'Nunito Sans';
       font-size: 21px;
       font-style: normal;
       font-weight: 700;
@@ -113,7 +114,7 @@
 
     &-button {
       color: $blue;
-      font-family: "Montserrat";
+      font-family: 'Montserrat';
       font-size: 32px;
       font-style: normal;
       font-weight: 700;

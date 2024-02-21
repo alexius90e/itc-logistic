@@ -43,7 +43,7 @@
     }
 
     &.active::after {
-      content: "";
+      content: '';
       position: fixed;
       top: 0;
       left: 0;
@@ -81,12 +81,13 @@
       top: 50%;
       left: 50%;
       z-index: 201;
-      max-height: 94vh;
+      max-height: 90vh;
+      height: calc(100vh + 1px);
       max-width: 1640px;
       width: 94vw;
       padding: 32px;
       box-sizing: border-box;
-      overflow: auto;
+      overflow: hidden;
       border-radius: 40px;
       background-color: $white;
       transform: translateX(-240vw) translateY(-50%);
@@ -102,13 +103,19 @@
         border-radius: 20px;
       }
 
-      &::-webkit-scrollbar {
-        width: 4px;
-      }
+      &-figure {
+        overflow: auto;
+        height: 100%;
+        width: 100%;
 
-      &::-webkit-scrollbar-thumb:vertical {
-        border-radius: 16px;
-        background-color: rgba($color: $black, $alpha: 0.25);
+        &::-webkit-scrollbar {
+          width: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb:vertical {
+          border-radius: 16px;
+          background-color: rgba($color: $black, $alpha: 0.25);
+        }
       }
 
       &-image {
@@ -120,16 +127,19 @@
     }
 
     &-close {
-      content: "";
+      content: '';
       position: absolute;
       top: 80px;
       right: 60px;
       display: block;
       width: 44px;
       height: 44px;
+      padding: 6px;
       border: none;
+      border-radius: 4px;
       background: url(../assets/close.svg) center no-repeat;
       background-size: 100%;
+      background-color: rgba($color: $white, $alpha: 1);
       transition: $baseTransition;
       cursor: pointer;
 

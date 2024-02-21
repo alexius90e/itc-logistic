@@ -1215,12 +1215,13 @@ h6 {
   top: 50%;
   left: 50%;
   z-index: 201;
-  max-height: 94vh;
+  max-height: 90vh;
+  height: calc(100vh + 1px);
   max-width: 1640px;
   width: 94vw;
   padding: 32px;
   box-sizing: border-box;
-  overflow: auto;
+  overflow: hidden;
   border-radius: 40px;
   background-color: #ffffff;
   transform: translateX(-240vw) translateY(-50%);
@@ -1238,10 +1239,15 @@ h6 {
     border-radius: 20px;
   }
 }
-.recalls__card-letter::-webkit-scrollbar {
+.recalls__card-letter-figure {
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+}
+.recalls__card-letter-figure::-webkit-scrollbar {
   width: 4px;
 }
-.recalls__card-letter::-webkit-scrollbar-thumb:vertical {
+.recalls__card-letter-figure::-webkit-scrollbar-thumb:vertical {
   border-radius: 16px;
   background-color: rgba(10, 10, 10, 0.25);
 }
@@ -1259,9 +1265,12 @@ h6 {
   display: block;
   width: 44px;
   height: 44px;
+  padding: 6px;
   border: none;
+  border-radius: 4px;
   background: url(../assets/close.svg) center no-repeat;
   background-size: 100%;
+  background-color: white;
   transition: all ease-in-out 0.15s;
   cursor: pointer;
 }
@@ -1434,10 +1443,14 @@ h6 {
   position: absolute;
   top: 50%;
   left: 50%;
-  max-height: 94vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 90vh;
+  height: 800px;
   padding: 40px 76px;
   box-sizing: border-box;
-  overflow: auto;
+  overflow: hidden;
   color: #11629b;
   border-radius: 40px;
   background-color: #ffffff;
@@ -1452,13 +1465,20 @@ h6 {
 @media (max-width: 768px) {
   .modal__body {
     padding: 27px;
+    height: 540px;
     border-radius: 20px;
   }
 }
-.modal__body::-webkit-scrollbar {
+.modal__content {
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+.modal__content::-webkit-scrollbar {
   width: 4px;
 }
-.modal__body::-webkit-scrollbar-thumb:vertical {
+.modal__content::-webkit-scrollbar-thumb:vertical {
   border-radius: 16px;
   background-color: rgba(10, 10, 10, 0.25);
 }
@@ -1470,9 +1490,12 @@ h6 {
   display: block;
   width: 44px;
   height: 44px;
+  padding: 6px;
   border: none;
+  border-radius: 4px;
   background: url(../assets/close.svg) center no-repeat;
   background-size: 100%;
+  background-color: white;
   transition: all ease-in-out 0.15s;
   cursor: pointer;
 }
@@ -1740,6 +1763,7 @@ h6 {
 @media (max-width: 1200px) {
   .modal-callback .modal__body {
     width: 610px;
+    height: auto;
   }
 }
 @media (max-width: 768px) {
@@ -1885,6 +1909,11 @@ h6 {
 @media (max-width: 1200px) {
   .modal-contacts .modal__body {
     width: 924px;
+  }
+}
+@media (max-width: 1024px) {
+  .modal-contacts .modal__body {
+    height: auto;
   }
 }
 @media (max-width: 768px) {
